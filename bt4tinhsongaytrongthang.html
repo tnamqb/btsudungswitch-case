@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="month">Nhập tháng</label>
+        <div>
+            <input id="month" name="month" type="number" />
+            <button id="display"  type="submit" onclick=displaymonth() style="background-color: white;
+            border-radius: 10px; 
+            color:blue;">Tinh số ngày</button>
+        </div>
+    </form>
+    <script>
+        function displaymonth(){
+            let M = parseInt(document.getElementById('month').value);
+            console.log(M);
+            switch (M){
+                case(1):
+                case(3):
+                case(5):
+                case(7):
+                case(8):
+                case(10):
+                case(12): 
+                    alert('Tháng '+ M + ' có 31 ngày');
+                    break;
+                case(4):
+                case(6):
+                case(9):
+                case(11):
+                    alert('Tháng '+ M + ' có 30 ngày');
+                    break;
+                case(2):
+                    alert('Tháng '+ M + ' có 28 ngày hoặc 29 ngày');
+                    break;
+                default: alert('only from 1 to 12');
+            }
+        }
+    </script>
+</body>
+</html>
